@@ -87,6 +87,7 @@ plot(meanByInterval$x, type="l", xlab="Interval Number", ylab="Mean Number of St
 
 ```r
 maxInterval <- which.max(meanByInterval$x)
+# Interval number 104 contains the maximum number of steps
 maxInterval
 ```
 
@@ -115,7 +116,8 @@ summary(activity)
 ```
 
 2. Devise a strategy for filling in all of the missing values in the dataset.  
-The strategy is to utilize the mean for the entire dataset as the imputed value
+**The strategy is to utilize the mean for the entire dataset as the imputed value**  
+**Code is shown below in #3**
 
 3. Create a new dataset that is equal to the original dataset but with the missing data filled in.
 
