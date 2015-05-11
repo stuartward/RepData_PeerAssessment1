@@ -1,9 +1,4 @@
----
-title: "Reproducible Research: Peer Assessment 1"
-output: 
-  html_document:
-    keep_md: true
----
+# Reproducible Research: Peer Assessment 1
 
 
 ## Loading and preprocessing the data
@@ -12,10 +7,21 @@ It is assumed that the reader has loaded the data file into the current working 
 
 Load the data, format the date column, view first few rows...
 
-```{r}
+
+```r
 activity <- read.csv("activity.csv", stringsAsFactors=FALSE)
 activity$date <- as.POSIXct(activity$date, format="%Y-%m-%d")
 head(activity)
+```
+
+```
+##   steps       date interval
+## 1    NA 2012-10-01        0
+## 2    NA 2012-10-01        5
+## 3    NA 2012-10-01       10
+## 4    NA 2012-10-01       15
+## 5    NA 2012-10-01       20
+## 6    NA 2012-10-01       25
 ```
 
 
@@ -32,6 +38,12 @@ head(activity)
 
 
 ## Are there differences in activity patterns between weekdays and weekends?
+
+
+
+
+
+
 
 
 totalByDay <-aggregate(activity$steps, by=list(activity$date), FUN=sum, na.rm=TRUE)
